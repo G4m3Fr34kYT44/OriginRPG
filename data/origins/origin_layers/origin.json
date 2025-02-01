@@ -1,0 +1,8 @@
+{
+    "origins": [
+        "origin_rpg:warrior",
+        "origin_rpg:mage",
+        "origin_rpg:archer"
+    ],
+    "enabled": true
+}

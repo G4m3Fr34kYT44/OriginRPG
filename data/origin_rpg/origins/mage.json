@@ -1,7 +1,12 @@
 {
     "name": "Mage",
+    "powers": [
+        "origin_rpg:source/mana",
+        "origin_rpg:mage/fire_ball",
+        "origin_rpg:mage/meditate"
+    ],
     "icon": {
-        "item": "amethyst_shard"
+        "item": "minecraft:amethyst_shard"
     },
     "impact": 0
 }

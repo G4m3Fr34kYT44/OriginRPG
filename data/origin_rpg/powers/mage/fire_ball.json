@@ -1,0 +1,55 @@
+{
+    "name": "Fire Ball",
+    "type": "origins:multiple",
+    "key1": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "origin_rpg:source/mana",
+            "comparison": ">=",
+            "compare_to": 5
+        },
+        "type": "origins:fire_projectile",
+        "entity_type": "minecraft:fireball",
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": true
+        },
+        "count": 1,
+        "interval": 0,
+        "start_delay": 0,
+        "speed": 1,
+        "divergence": 1,
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    },
+    "key0_": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "origin_rpg:source/mana",
+            "comparison": ">=",
+            "compare_to": 5
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:delay",
+            "action": {
+                "type": "origins:modify_resource",
+                "resource": "origin_rpg:source/mana",
+                "modifier": {
+                    "operation": "add_base_early",
+                    "value": -5
+                }
+            },
+            "ticks": 1
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": true,
+            "bar_index": 0
+        },
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    }
+}

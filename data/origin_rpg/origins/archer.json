@@ -1,7 +1,8 @@
 {
     "name": "Archer",
+    "description": "a",
     "icon": {
-        "item": "bow"
+        "item": "minecraft:bow"
     },
     "impact": 0
 }

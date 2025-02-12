@@ -1,7 +1,8 @@
 {
     "name": "Warrior",
+    "description": "w",
     "icon": {
-        "item": "iron_sword"
+        "item": "minecraft:iron_sword"
     },
     "impact": 0
 }

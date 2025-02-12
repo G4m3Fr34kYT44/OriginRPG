@@ -4,5 +4,7 @@
         "origin_rpg:mage",
         "origin_rpg:archer"
     ],
-    "enabled": true
+    "enabled": true,
+    "replace": true,
+    "allow_random": true
 }

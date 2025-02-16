@@ -6,7 +6,7 @@
         "resource": "origin_rpg:source/mana",
         "modifier": {
             "operation": "add_base_early",
-            "value": 1
+            "value": 10
         }
     },
     "cooldown": 20,

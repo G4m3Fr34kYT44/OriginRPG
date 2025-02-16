@@ -1,34 +1,77 @@
 {
     "name": "Fire Ball",
     "type": "origins:multiple",
-    "key1": {
+    "key0": {
         "condition": {
-            "type": "origins:resource",
-            "resource": "origin_rpg:source/mana",
-            "comparison": ">=",
-            "compare_to": 5
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "origin_rpg:source/mana",
+                    "comparison": ">=",
+                    "compare_to": 5
+                },
+                {
+                    "type": "origins:scoreboard",
+                    "objective": "Level",
+                    "comparison": ">=",
+                    "compare_to": 7
+                }
+            ]
         },
-        "type": "origins:fire_projectile",
-        "entity_type": "minecraft:fireball",
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "distance": 20,
+            "block": true,
+            "entity": true,
+            "shape_type": "visual",
+            "fluid_handling": "any",
+            "bientity_action": {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:explode",
+                    "power": 5,
+                    "destruction_type": "none",
+                    "damage_self": true,
+                    "create_fire": true
+                }
+            },
+            "block_action": {
+                "type": "origins:explode",
+                "power": 5,
+                "destruction_type": "none",
+                "damage_self": true,
+                "create_fire": true
+            },
+            "space": "world",
+            "command_along_ray": "particle minecraft:flame ~ ~ ~ 0 0 0 0.01 50 force"
+        },
         "cooldown": 20,
         "hud_render": {
             "should_render": true
         },
-        "count": 1,
-        "interval": 0,
-        "start_delay": 0,
-        "speed": 1,
-        "divergence": 1,
         "key": {
             "key": "key.origins.primary_active"
         }
     },
-    "key0_": {
+    "key1": {
         "condition": {
-            "type": "origins:resource",
-            "resource": "origin_rpg:source/mana",
-            "comparison": ">=",
-            "compare_to": 5
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "origin_rpg:source/mana",
+                    "comparison": ">=",
+                    "compare_to": 5
+                },
+                {
+                    "type": "origins:scoreboard",
+                    "objective": "Level",
+                    "comparison": ">=",
+                    "compare_to": 7
+                }
+            ]
         },
         "type": "origins:active_self",
         "entity_action": {
@@ -45,8 +88,7 @@
         },
         "cooldown": 20,
         "hud_render": {
-            "should_render": true,
-            "bar_index": 0
+            "should_render": true
         },
         "key": {
             "key": "key.origins.primary_active"
